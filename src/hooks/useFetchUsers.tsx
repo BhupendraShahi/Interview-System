@@ -1,5 +1,5 @@
 import { getDocs, query, where } from 'firebase/firestore';
-import React, { useState,useEffect } from 'react'
+import { useState,useEffect } from 'react'
 import { useAppSelector } from '../app/hooks';
 import { userRef } from '../utils/FirebaseConfig';
 import { UserType } from '../utils/Types';

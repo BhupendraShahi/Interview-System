@@ -9,7 +9,7 @@ import {
 } from "@elastic/eui";
 import { getDocs, query, where } from "firebase/firestore";
 import moment from "moment";
-import React, { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { useAppSelector } from "../app/hooks";
 import EditFlyout from "../components/EditFlyout";

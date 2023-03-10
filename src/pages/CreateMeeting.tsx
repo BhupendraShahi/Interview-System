@@ -1,5 +1,4 @@
 import { EuiCard, EuiFlexGroup, EuiFlexItem, EuiImage } from "@elastic/eui";
-import React from "react";
 import Header from "../components/Header";
 import useAuth from "../hooks/useAuth";
 import meeting1 from "../assets/meeting1.png";

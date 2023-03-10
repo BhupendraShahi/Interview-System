@@ -1,5 +1,4 @@
 import { EuiComboBox, EuiFormRow } from '@elastic/eui'
-import React from 'react'
 
 function MeetingUserField({
     label,

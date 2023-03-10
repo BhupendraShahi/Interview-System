@@ -1,7 +1,7 @@
 import { EuiFlexGroup, EuiForm, EuiSpacer } from '@elastic/eui'
 import { addDoc } from 'firebase/firestore'
 import moment from 'moment'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAppSelector } from '../app/hooks'
 import CreateMeetingButtons from '../components/FormComponents/CreateMeetingButtons'

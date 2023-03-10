@@ -1,5 +1,4 @@
 import { EuiCard, EuiFlexGroup, EuiFlexItem, EuiImage } from '@elastic/eui';
-import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import dashboard1 from "../assets/dashboard1.png";

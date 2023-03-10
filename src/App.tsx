@@ -41,6 +41,7 @@ function App() {
     else {
       window.location.reload();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDarkTheme]);
 
   const overrides = {

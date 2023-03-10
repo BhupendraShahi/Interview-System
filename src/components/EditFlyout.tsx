@@ -10,7 +10,7 @@ import {
   } from "@elastic/eui";
   import { doc, updateDoc } from "firebase/firestore";
   import moment from "moment";
-  import React, { useEffect, useState } from "react";
+  import { useEffect, useState } from "react";
   import useFetchUsers from "../hooks/useFetchUsers";
   import useToast from "../hooks/useToast";
   import { firebaseDB } from "../utils/FirebaseConfig";

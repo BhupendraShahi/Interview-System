@@ -10,7 +10,7 @@ import {
 
 import { getDocs, query } from "firebase/firestore";
 import moment from "moment";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAppSelector } from "../app/hooks";
 import Header from "../components/Header";
