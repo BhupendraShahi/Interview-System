@@ -13,9 +13,9 @@ import Header from "../components/Header";
 import useAuth from "../hooks/useAuth";
 import useFetchUsers from "../hooks/useFetchUsers";
 import useToast from "../hooks/useToast";
-import { meetingsRef } from "../utils/FirebaseConfig";
+import { meetingsRef } from "../utils/firebaseConfig";
 import { generateMeetingID } from "../utils/generateMeetingId";
-import { FieldErrorType, UserType } from "../utils/Types";
+import { FieldErrorType, UserType } from "../utils/types";
 
 function VideoConference() {
   useAuth();
@@ -23,7 +23,7 @@ function VideoConference() {
   const [users] = useFetchUsers();
   const [createToast] = useToast();
 
-  const uid = useAppSelector((zoom) => zoom.auth.userInfo?.uid);
+  const uid = useAppSelector((interview) => interview.auth.userInfo?.uid);
   const [meetingName, setMeetingName] = useState("");
   const [selectedUsers, setSelectedUsers] = useState<Array<UserType>>([]);
   const [size, setSize] = useState(1);

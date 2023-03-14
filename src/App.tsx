@@ -21,18 +21,18 @@ import JoinMeeting from "./pages/JoinMeeting";
 
 function App() {
   const dispatch = useAppDispatch();
-  const toasts = useAppSelector((zoom)=> zoom.meetings.toasts);
+  const toasts = useAppSelector((interview)=> interview.meetings.toasts);
 
-  const isDarkTheme = useAppSelector((zoom) => zoom.auth.isDarkTheme);
+  const isDarkTheme = useAppSelector((interview) => interview.auth.isDarkTheme);
   const [theme, setTheme] = useState<EuiThemeColorMode>("light");
   const [isInitialTheme, setIsInitialTheme] = useState(true);
 
   useEffect(() => {
-    const theme = localStorage.getItem("zoom-theme");
+    const theme = localStorage.getItem("interview-theme");
     if (theme) {
       setTheme(theme as EuiThemeColorMode);
     } else {
-      localStorage.setItem("zoom-theme", "light");
+      localStorage.setItem("interview-theme", "light");
     }
   }, []);
 

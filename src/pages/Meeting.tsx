@@ -16,12 +16,12 @@ import { useAppSelector } from "../app/hooks";
 import Header from "../components/Header";
 import useAuth from "../hooks/useAuth";
 
-import { meetingsRef } from "../utils/FirebaseConfig";
-import { MeetingType } from "../utils/Types";
+import { meetingsRef } from "../utils/firebaseConfig";
+import { MeetingType } from "../utils/types";
 
 export default function Meeting() {
   useAuth();
-  const userInfo = useAppSelector((zoom) => zoom.auth.userInfo);
+  const userInfo = useAppSelector((interview) => interview.auth.userInfo);
   const [meetings, setMeetings] = useState<Array<MeetingType>>([]);
 
   useEffect(() => {

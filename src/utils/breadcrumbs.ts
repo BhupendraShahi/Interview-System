@@ -1,5 +1,5 @@
 import { NavigateFunction } from "react-router-dom";
-import { BreadCrumbsType } from "./Types";
+import { BreadCrumbsType } from "./types";
 
 export const getDashboardBreadCrumbs = (
   navigate: NavigateFunction

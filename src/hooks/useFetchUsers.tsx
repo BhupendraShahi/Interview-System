@@ -1,12 +1,12 @@
 import { getDocs, query, where } from 'firebase/firestore';
 import { useState,useEffect } from 'react'
 import { useAppSelector } from '../app/hooks';
-import { userRef } from '../utils/FirebaseConfig';
-import { UserType } from '../utils/Types';
+import { userRef } from '../utils/firebaseConfig';
+import { UserType } from '../utils/types';
 
 function useFetchUsers() {
     const [users, setUsers] = useState<Array<UserType>>([]);
-    const uid = useAppSelector((zoom) => zoom.auth.userInfo?.uid);
+    const uid = useAppSelector((interview) => interview.auth.userInfo?.uid);
 
     useEffect(() => {
         if(uid) {

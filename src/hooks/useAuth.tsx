@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom'
 import { setUser } from '../app/slices/AuthSlice';
-import { firebaseAuth } from '../utils/FirebaseConfig';
+import { firebaseAuth } from '../utils/firebaseConfig';
 
 function useAuth() {
   const navigate = useNavigate();

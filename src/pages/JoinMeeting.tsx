@@ -5,7 +5,7 @@ import moment from "moment";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useToast from "../hooks/useToast";
-import { firebaseAuth, meetingsRef } from "../utils/FirebaseConfig";
+import { firebaseAuth, meetingsRef } from "../utils/firebaseConfig";
 import { generateMeetingID } from "../utils/generateMeetingId";
 
 export default function JoinMeeting() {
@@ -113,7 +113,7 @@ export default function JoinMeeting() {
       showTurnOffRemoteCameraButton: true,
       showTurnOffRemoteMicrophoneButton: true,
       showRemoveUserButton: true,
-      onYouRemovedFromRoom: ()=> navigate("/"),
+      onYouRemovedFromRoom: () => navigate("/"),
     });
   };
 

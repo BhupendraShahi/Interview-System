@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { setToasts } from "../app/slices/MeetingSlice";
 
 function useToast() {
-  const toasts = useAppSelector((zoom) => zoom.meetings.toasts);
+  const toasts = useAppSelector((interview) => interview.meetings.toasts);
   const dispatch = useAppDispatch();
   const createToast = ({
     title,
