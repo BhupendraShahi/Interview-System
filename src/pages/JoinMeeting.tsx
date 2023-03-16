@@ -84,6 +84,7 @@ export default function JoinMeeting() {
     };
     getMeetingData();
   }, [params.id, user, userLoaded, createToast, navigate]);
+
   const myMeeting = async (element: any) => {
     const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
       parseInt(process.env.REACT_APP_ZEGOCLOUD_APP_ID!),
@@ -92,28 +93,35 @@ export default function JoinMeeting() {
       user?.uid ? user.uid : generateMeetingID(),
       user?.displayName ? user.displayName : generateMeetingID()
     );
+
     const zp = ZegoUIKitPrebuilt.create(kitToken);
 
     zp?.joinRoom({
-      turnOnMicrophoneWhenJoining: true,
-      turnOnCameraWhenJoining: true,
-      showMyCameraToggleButton: true,
-      showMyMicrophoneToggleButton: true,
-      showAudioVideoSettingsButton: true,
-      showScreenSharingButton: true,
-      showTextChat: true,
-      showUserList: true,
+      container: element,
       maxUsers: 50,
-      layout: "Auto",
-      showLayoutButton: true,
       scenario: {
         mode: ZegoUIKitPrebuilt.VideoConference,
       },
-      showRoomTimer: true,
-      showTurnOffRemoteCameraButton: true,
-      showTurnOffRemoteMicrophoneButton: true,
-      showRemoveUserButton: true,
-      onYouRemovedFromRoom: () => navigate("/"),
+      showScreenSharingButton: true,
+      showRoomTimer: true, 
+      showTurnOffRemoteCameraButton: true, 
+      showTurnOffRemoteMicrophoneButton: true, 
+      showRemoveUserButton: true, 
+
+      onYouRemovedFromRoom: ()=> navigate("/"),
+      onUserLeave(user) {
+        navigate("/");
+      },
+      onLeaveRoom(users) {
+        navigate("/");
+      },
+      sharedLinks: [
+        {
+          name: 'Personal link',
+          url:
+            window.location.origin + window.location.pathname + '?roomID=' + params.id,
+        },
+      ]
     });
   };
 

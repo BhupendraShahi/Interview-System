@@ -84,7 +84,7 @@ function VideoConference() {
           ? []
           : selectedUsers.map((user: UserType) => user.uid),
         meetingDate: startDate.format("L"),
-        maxUsers: anyoneCanJoin ? 100 : size,
+        maxUsers: anyoneCanJoin ? 50 : size,
         status: true,
       });
       createToast({
