@@ -1,4 +1,5 @@
 import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
+import { ZegoSuperBoardManager } from "zego-superboard-web";
 import { onAuthStateChanged } from "firebase/auth";
 import { getDocs, query, where } from "firebase/firestore";
 import moment from "moment";
@@ -96,6 +97,7 @@ export default function JoinMeeting() {
 
     const zp = ZegoUIKitPrebuilt.create(kitToken);
 
+    zp?.addPlugins({ZegoSuperBoardManager}),
     zp?.joinRoom({
       container: element,
       turnOnMicrophoneWhenJoining: true,
@@ -113,6 +115,7 @@ export default function JoinMeeting() {
       showTurnOffRemoteCameraButton: true, 
       showTurnOffRemoteMicrophoneButton: true, 
       showRemoveUserButton: true, 
+      videoResolutionDefault: ZegoUIKitPrebuilt.VideoResolution_480P,
       
       scenario: {
         mode: ZegoUIKitPrebuilt.VideoConference,
