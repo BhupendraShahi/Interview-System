@@ -97,7 +97,7 @@ export default function JoinMeeting() {
 
     const zp = ZegoUIKitPrebuilt.create(kitToken);
 
-    zp?.addPlugins({ZegoSuperBoardManager}),
+    zp?.addPlugins({ZegoSuperBoardManager});
     zp?.joinRoom({
       container: element,
       turnOnMicrophoneWhenJoining: true,
