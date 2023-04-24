@@ -98,22 +98,24 @@ export default function JoinMeeting() {
 
     zp?.joinRoom({
       container: element,
-      maxUsers: 50,
-      scenario: {
-        mode: ZegoUIKitPrebuilt.VideoConference,
-      },
+      turnOnMicrophoneWhenJoining: true,
+      turnOnCameraWhenJoining: true,
+      showMyCameraToggleButton: true,
+      showMyMicrophoneToggleButton: true,
+      showAudioVideoSettingsButton: true,
       showScreenSharingButton: true,
+      showTextChat: true,
+      showUserList: true,
+      maxUsers: 50,
+      layout: "Auto",
+      showLayoutButton: true,
       showRoomTimer: true, 
       showTurnOffRemoteCameraButton: true, 
       showTurnOffRemoteMicrophoneButton: true, 
       showRemoveUserButton: true, 
-
-      onYouRemovedFromRoom: ()=> navigate("/"),
-      onUserLeave(user) {
-        navigate("/");
-      },
-      onLeaveRoom(users) {
-        navigate("/");
+      
+      scenario: {
+        mode: ZegoUIKitPrebuilt.VideoConference,
       },
       sharedLinks: [
         {
@@ -121,7 +123,11 @@ export default function JoinMeeting() {
           url:
             window.location.origin + window.location.pathname + '?roomID=' + params.id,
         },
-      ]
+      ],
+
+      onYouRemovedFromRoom: ()=> navigate("/"),
+      onUserLeave(user) {navigate("/");},
+      onLeaveRoom(users) {navigate("/");},
     });
   };
 

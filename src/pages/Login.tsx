@@ -69,6 +69,9 @@ function Login() {
                 <EuiImage src={logo} alt="logo" size="230px" />
                 <EuiSpacer size="xs" />
                 <EuiText textAlign="center" grow={false}>
+                  <h2>
+                    <EuiTextColor color="#F2E832">BAAM</EuiTextColor>
+                  </h2>
                   <h3>
                     <EuiTextColor>One Platform For</EuiTextColor>
                     <EuiTextColor color="#0b5cff"> Interviews</EuiTextColor>
