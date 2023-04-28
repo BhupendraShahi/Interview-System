@@ -129,8 +129,12 @@ export default function JoinMeeting() {
       ],
 
       onYouRemovedFromRoom: ()=> navigate("/"),
-      onUserLeave(user) {navigate("/");},
-      onLeaveRoom(users) {navigate("/");},
+      onUserLeave: (user) => {
+        navigate("/");
+      },
+      onLeaveRoom: (user) => {
+        navigate("/");
+      },
     });
   };
 
