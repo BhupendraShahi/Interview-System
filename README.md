@@ -1,5 +1,5 @@
 # A video Conferencing Application made using React, Firebase, ZegoCloud, etc.
-# this is part of a major project Called NLP enabled Interview System. Which has a resume job posting website, a resume scrapper, video conferencing application. 
+# this is part of a major project Called NLP enabled Interview System. Which has a job posting website, a resume scrapper and a video conferencing application. This is the video conferencing aapplication repository.
 # once the resume is shortlisted the used is invited to this video conferencing application for the virtual interview via an invitation email.
 
 # Features of the Application
